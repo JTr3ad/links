@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan Treadway</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #c8b87a;
+      --gold-dim: rgba(200, 184, 122, 0.15);
+      --gold-border: rgba(200, 184, 122, 0.25);
+      --bg: #080808;
+      --bg2: #111111;
+      --text: #e8e4d8;
+      --muted: #666;
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 48px 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    /* Header */
+    .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .title {
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    /* Divider line */
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold-border);
+      margin: 0 auto 32px;
+    }
+
+    /* Quote */
+    .quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 400;
+      color: rgba(232, 228, 216, 0.55);
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      font-style: italic;
+      padding: 0 8px;
+    }
+
+    /* Links */
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+
+    .link-card {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      border: 1px solid var(--gold-border);
+      border-radius: 2px;
+      padding: 20px 24px;
+      background: transparent;
+      transition: background 0.2s, border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gold-dim);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .link-card:hover::before { opacity: 1; }
+    .link-card:hover { border-color: var(--gold); }
+
+    .link-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .link-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .link-desc {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    .link-arrow {
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gold);
+      font-size: 16px;
+      opacity: 0.6;
+    }
+
+    /* Footer */
+    .footer {
+      font-size: 11px;
+      color: #333;
+      letter-spacing: 0.06em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="name">Jonathan Treadway</div>
+    <div class="title">Identity Architect</div>
+    <div class="divider"></div>
+
+    <p class="quote">You can't change your life until you change the man living it.</p>
+
+    <div class="links">
+
+      <a class="link-card" href="https://themirror.jonathantreadway.com">
+        <div class="link-label">Free · Start Here</div>
+        <div class="link-title">The Mirror</div>
+        <div class="link-desc">8 questions. 10 minutes. Find out exactly where you're stuck.</div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a class="link-card" href="https://shift.jonathantreadway.com">
+        <div class="link-label">$27 · One Sitting</div>
+        <div class="link-title">The Shift</div>
+        <div class="link-desc">Read, think, write. Build the standard you'll actually live by.</div>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a class="link-card" href="https://youtube.com/@jtread">
+        <div class="link-label">YouTube</div>
+        <div class="link-title">Watch</div>
+        <div class="link-desc">Mindset. Structure. Standards. Every video is built around one idea.</div>
+        <span class="link-arrow">→</span>
+      </a>
+
+    </div>
+
+
+
+  </div>
+</body>
+</html>
